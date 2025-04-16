@@ -25,10 +25,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-3&8p!zr7_dt5z#gpip4s^r2wwy7dl-qv@tbjunpfl=7w1#0#vq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 import os
-ALLOWED_HOSTS = os.getenv['iot-backend-django.onrender.com', 'localhost'].splite(",")
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", 'iot-backend-django.onrender.com', 'localhost').split(", ")
 
 # Application definition
 
@@ -177,6 +177,5 @@ DEFAULT_FROM_EMAIL = 'no-reply@example.com'
 
 FRONTEND_URL = 'http://localhost:4200'  # Change to your Angular frontend URL
 
-import os
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
