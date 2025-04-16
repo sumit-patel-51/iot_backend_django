@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-3&8p!zr7_dt5z#gpip4s^r2wwy7dl-qv@tbjunpfl=7w1#0#vq
 DEBUG = False
 
 import os
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", 'iot-backend-django.onrender.com', 'localhost').split(", ")
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", 'iot-backend-django.onrender.com, localhost').split(", ")
 
 # Application definition
 
